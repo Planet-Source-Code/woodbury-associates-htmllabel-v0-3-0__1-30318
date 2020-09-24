@@ -1,0 +1,288 @@
+<html>
+	<head>
+		<title>HTMLLabel Documentation</title>
+	</head>
+
+	<body text='black' bgcolor='white'>
+		  <font face='Tahoma'>
+			<TABLE width='100%' border='0'>
+					<TR height='50'>
+						<TD align='center' valign='center'>
+						<h1>HTMLLabel</h1>
+						</TD>
+						<TD width='50' valign='center'>
+						<IMG src='logo.gif' border='0'>
+						</TD>
+					</TR>
+			</TABLE>
+			<hr>
+		
+				<h4>What is HTMLLabel ?</h4>
+				<p>First, let's start by saying what it isn't.  HTMLLabel is not intended to be an Internet 
+				Explorer or	Netscape Navigator clone and it is not a web browser in its own right.  
+				Neither is it intended to provide a full-blown, all-singing, all-dancing web experience, as
+				(by design) it provides no support for frames or active content.
+				It was developed purely as a way of displaying HTML on a Visual Basic form
+				without the overhead of using the WebBrowser control (which	requires Internet Explorer to be
+				installed along	with the containing application).</p>
+				<p>OK, now we know what it's <i>not</i>, what exactly <i>is</i> it ?</p>
+				<p>HTMLLabel is a free HTML display control designed with the following goals:
+				<ol>
+					<li>To provide a simple way of displaying HTML within a VB application.
+					<li>Small footprint (the source code is around 150KB).
+					<li>Minimal external run-time dependencies (there are none, in fact).
+				</ol>
+				</p>
+				<p>
+				HTMLLabel is coded entirely in Visual Basic 6, which means that you can compile it directly
+				into your application with no requirement for external run-time files or additional
+				installation tasks.</p>
+				
+				<p><b>Author</b></p>
+				<p>HTMLLabel was developed by Woodbury Associates, a UK-based software house specialising in
+				Windows software developed with Microsoft's VB and VBA-enabled toolset.  We are constantly
+				developing tools and components for use in our own projects and from time to time we release
+				some of them publicly, which is how you come to be reading this document.</p>
+				<p>For further information, and details on our other products, visit our 
+				<a href='http://www.damnet.freeserve.co.uk/products/'>products web site</a> or 
+				<a href='mailto:htmllabel@damnet.freeserve.co.uk'>e-mail</a> us.</p>
+
+				<p><b>Licensing</b></p>
+				<p>You are free to use HTMLLabel in any way you like, so long as you do not attempt to package
+				it as a commercial component and claim it as your own work.  If you are in any doubt about what
+				you intend to do with this software, please <a href='mailto:htmllabel@damnet.freeserve.co.uk'>
+				contact us</a> before using it. The bottom line is that, although HTMLLabel is free, its
+				ownership and copyright are retained by <a href='http://www.woodbury.co.uk'>Woodbury Associates</a>.</p>
+
+				<p><b>Disclaimer</b></p>
+				<p>Woodbury Associates does not warrant that the software is error free. Woodbury Associates disclaims all other warranties with respect to the software, either express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose and noninfringement of third party rights.</p>
+				<p>In no event shall Woodbury Associates or its suppliers be liable to you for any consequential, special, incidental or 			indirect damages of any kind arising out of the delivery, performance or use of the software, even if Woodbury Associates has been advised of the possibility of such damages.</p>
+
+				<p><b>Version History</b></p>
+				
+				<table border='1' cellpadding='4' cellspacing='0'>
+					<tr>
+						<th width='100' align='center' bgcolor='#DDDDDD'><b>Version</b></th>
+						<th width='100' align='center' bgcolor='#DDDDDD'><b>Date</b></th>
+						<th align='center' bgcolor='#DDDDDD'><b>Details</b></th>
+					</tr>
+					<tr>
+						<td align='center' valign='center'>0.3.0</td><td align='center' valign='center'>02.01.2002</td><td>&lt;P&gt; align attribute support added.<br>Support for centred and right-aligned text enhanced.<br>&lt;DIV&gt; support added.<br>&lt;TABLE&gt; bgcolor and height attribute support added.<br>&lt;TR&gt; height attribute support added.<br>&lt;TD&gt; bgcolor and valign support added.<br>Placeholders displayed for missing graphics.<br>Horizontal scrolling added.<br>DefaultPadding, DefaultSpacing and UnderlineLinks properties added.</td>
+					</tr>
+					<tr>
+						<td align='center' valign='center'>0.2.0</td><td align='center' valign='center'>03.10.2001</td><td>&lt;IMG&gt; support added.<br>EnableTooltips property added.<br>VB URL support added.<br>Right-aligned text support added.</td>
+					</tr>
+					<tr>
+						<td align='center' valign='center'>0.1.0</td><td align='center' valign='center'>09.08.2001</td><td>&lt;TABLE&gt; support added.</td>
+					</tr>
+					<tr>
+						<td align='center' valign='center'>0.0.1</td><td align='center' valign='center'>20.07.2001</td><td>Version property added.<br>Design mode handling improved.</td>
+					</tr>
+					<tr>
+						<td align='center' valign='center'>0.0.0</td><td align='center' valign='center'>19.07.2001</td><td>Initial release.</td>
+					</tr>
+				</table>
+				
+				<p><b>HTML Support</b></p>
+				<p>HTMLLabel supports a subset of the standard Hypertext Markup Language (HTML), the full set of supported tags is:</p>
+
+				<table border='1' cellpadding='4' cellspacing='0'>
+					<tr>
+						<th align='center' width='100' bgcolor='#DDDDDD'><b>Tag</b></th>
+						<th align='center' bgcolor='#DDDDDD'><b>Supported Attributes</b></th>
+					</tr>
+					<tr><td align='center'>A</td><td>href, id, name, title</td></tr>
+					<tr><td align='center'>B</td><td></td></tr>
+					<tr><td align='center'>BIG</td><td></td></tr>
+					<tr><td align='center'>BLOCKQUOTE</td><td></td></tr>
+					<tr><td align='center'>BODY</td><td>background, bgcolor, text, link</td></tr>
+					<tr><td align='center'>BR</td><td></td></tr>
+					<tr><td align='center'>CENTER</td><td></td></tr>
+					<tr><td align='center'>DIV</td><td>align</td></tr>
+					<tr><td align='center'>EM</td><td></td></tr>
+					<tr><td align='center'>FONT</td><td>face, color, size</td></tr>
+					<tr><td align='center'>H1-H6</td><td></td></tr>
+					<tr><td align='center'>HR</td><td></td></tr>
+					<tr><td align='center'>HTML</td><td></td></tr>
+					<tr><td align='center'>I</td><td></td></tr>
+					<tr><td align='center'>IMG</td><td>alt, border, height, hspace, src, vspace, width</td></tr>
+					<tr><td align='center'>LI</td><td></td></tr>
+					<tr><td align='center'>OL</td><td></td></tr>
+					<tr><td align='center'>P</td><td>align</td></tr>
+					<tr><td align='center'>SMALL</td><td></td></tr>
+					<tr><td align='center'>STRONG</td><td></td></tr>
+					<tr><td align='center'>TABLE</td><td>align (left and center), bgcolor, border, cellpadding, cellspacing, height, width</td></tr>
+					<tr><td align='center'>THEAD</td><td></td></tr>
+					<tr><td align='center'>TBODY</td><td></td></tr>
+					<tr><td align='center'>TFOOT</td><td></td></tr>
+					<tr><td align='center'>TR</td><td>height</td></tr>
+					<tr><td align='center'>TH</td><td>align, bgcolor, colspan, valign, width</td></tr>
+					<tr><td align='center'>TD</td><td>align, bgcolor, colspan, valign, width</td></tr>
+					<tr><td align='center'>U</td><td></td></tr>
+					<tr><td align='center'>UL</td><td></td></tr>
+				</table>
+				<h4>Using HTMLLabel</h4>
+				<p>Copy the following files into your project's source directory and add them to your VB project:</p>
+				<ul>
+					<li>HTMLLabel.ctl
+					<li>HTMLLabel.res
+				</ul>
+				<p>You should now be able to place an instance of the HTMLLabel control onto a form in the same
+				way that you would put any other control onto a form.</p>
+				<p>Set the control's appearance, font, etc. in the <i>Properties</i> window.</p>
+				<p>Set the control's <i>DocumentHTML</i> property at run-time.  This is the actual HTML
+				which the control will display.</p>
+				<p><strong>Supporting Graphics</strong></p>
+				<p>If you want to support graphics, you will need to implement a handler for the <i>LoadImage</i> event.
+				HTMLLabel requires its container to provide any graphics referenced in your HTML as standard Picture/StdPicture/IPicture
+				objects.
+				The simplest way to do this is to load your graphics using VB's <i>LoadPicture()</i> function, but you can also use graphics
+				stored in ImageList or PictureBox controls.</p>
+				<p>For example, the following code will load graphics from the same directory as your application:</p>
+				<table width='100%'>
+					<tr><td width='25'></td><td>Private Sub HTMLabel1_LoadImage(Source As String, Image As stdole.Picture)</td></tr>
+			        <tr><td width='25'></td><td>
+						<table width='100%'><tr><td width='25'></td><td>Set Image = LoadPicture(App.Path &amp; &quot;\&quot; &amp; Source)</td></tr></table>
+					</td></tr>
+					<tr><td width='25'></td><td>End Sub</td></tr>
+				</table>
+				<p><strong>Integrating HTML and Visual Basic Code</strong></p>
+				<p>In order to provide a means of programmatically responding to user events in your HTML, HTMLLabel implements <i>VB
+				URLs</i>.  This mechanism is similar to the standard <i>JavaScript URLs</i> supported by WWW browsers but differs in that,
+				rather than calling a script function included in the HTML document itself, it allows you to directly call Visual Basic code
+				in the form which contains the HTMLLabel control.</p>
+				<p>For example, if you place the following code into your form ...</p>
+				<table width='100%'>
+					<tr><td width='25'></td><td>Public Sub SomeFunc(SomeArg As String)</td></tr>
+			        <tr><td width='25'></td><td>
+						<table width='100%'><tr><td width='25'></td><td>MsgBox SomeArg</td></tr></table>
+					</td></tr>
+					<tr><td width='25'></td><td>End Sub</td></tr>
+				</table>
+				<p>... and place the following fragment into your HTML document ...</p>
+				<table width='100%'>
+					<tr><td width='25'></td><td>&lt;A href='vb:SomeFunc(&quot;Hello, World!&quot;)'&gt;say hello&lt;/A&gt;</td></tr>
+				</table>
+				<p> ... when you click on the <i>say hello</i> hyperlink, the <i>&quot;Hello, World!&quot;</i> message box will be
+				displayed.</p>
+				<p>Caveats, limitations and other information:</p>
+				<ol>
+					<li>Referenced VB URLs must be declared <i>Public</i> in the form which contains the HTMLLabel control instance.
+					<li>You can reference both <i>Functions</i> and <i>Subs</i>, but HTMLLabel cannot use the return value from a function. 
+					<li>The number of arguments to functions/subs is limited to a maximum of eight.
+					<li>HTMLLabel does not support variables, so all arguments must be constants.
+					<li>In order to define a VB URL, your anchor's <i>href</i> attribute must start with &quot;vb:&quot;.
+				</ol>
+				<h4>Known Issues and Limitations</h4>
+				<p>Unlike other HTML renderers, HTMLLabel does not stretch table cells to accommodate their contents.
+				Instead, if table and cell widths are not explicitly given, they are always sized proportionally. You can avoid apparent rendering anomalies due to this sizing algorithm by ensuring that you use explicit table and cell widths, as well as row heights, in your documents.</p>
+				<p>The <i>rowspan</i> attribute for &lt;TD&gt; elements is not supported. Whilst this might seem insignificant, it is the one limitation which causes the greatest difference between HTMLLabel's rendering of a document and that of other renderers.
+				If you have a document which looks awful when displayed by HTMLLabel (they are not difficult to find), this is the first thing to look for.</p>
+				<p>Anchors which contain a large amount of text which wraps onto more than one line are not tracked correctly.
+				In this situation, only the portion of the anchor on the last line will actually be active as far as the mouse pointer is concerned.</p>
+				<p>It is hoped that these issues will be resolved in later releases. In the meantime, it is possible to work around these problems through experimentation and a little imagination.</p>
+				<h4>Properties</h4>
+				<br>
+				<strong>Appearance</strong>
+				<ul>
+					<li>0 = Flat
+					<li>1 = 3D
+				</ul>
+				<br>
+				<strong>BackColor</strong>
+				<ul>
+					<li>Sets the control's default background colour.
+				</ul>
+				<br>
+				<strong>BorderStyle</strong>
+				<ul>
+					<li>0 = None
+					<li>1 = Single
+				</ul>
+				<br>
+				<strong>DefaultFontName</strong>
+				<ul>
+					<li>Specifies the name of the default font.
+				</ul>
+				<br>
+				<strong>DefaultFontSize</strong>
+				<ul>
+					<li>Specifies the default font size.
+				</ul>
+				<br>
+				<strong>DefaultPadding</strong>
+				<ul>
+					<li>Specifies the default padding to be used for tables and document margins.
+				</ul>
+				<br>
+				<strong>DefaultSpacing</strong>
+				<ul>
+					<li>Specifies the default line spacing to be used.
+				</ul>
+				<br>
+				<strong>DocumentHTML</strong>
+				<ul>
+					<li>The actual HTML to be displayed.
+				</ul>
+				<br>
+				<strong>DocumentTitle</strong>
+				<ul>
+					<li>Title of the current HTML document (read-only).
+				</ul>
+				<br>
+				<strong>EnableAnchors</strong>
+				<ul>
+					<li>False = Do not display or respond to hyperlinks.
+					<li>True = Enable hyperlinks.
+				</ul>
+				<br>
+				<strong>EnableScroll</strong>
+				<ul>
+					<li>False = Disable vertical scrolling.
+					<li>True = Enable vertical scrolling.
+				</ul>
+				<br>
+				<strong>EnableTooltips</strong>
+				<ul>
+					<li>False = Disable tooltips.
+					<li>True = Enable tooltips.
+				</ul>
+				<br>
+				<strong>UnderlineLinks</strong>
+				<ul>
+					<li>False = Do not underline anchors / hyperlinks.
+					<li>True = Underline anchors / hyperlinks.
+				</ul>
+				<br>
+				<strong>Version</strong>
+				<ul>
+					<li>Reports the control's version number.
+				</ul>
+				
+				<h4>Methods</h4>
+				<br>
+				<strong>Refresh(Optional PaintOnly As Boolean = True)</strong>
+				<ul>
+					<li>Refreshes the HTML display. This method must be called whenever the size of the
+					control is changed.
+				</ul>
+
+				<h4>Events</h4>
+				<br>
+				<strong>HyperlinkClick(Href As String)</strong>
+				<ul>
+					<li>Fired when a hyperlink whose name or id is not found within the current document.
+					Hyperlinks which refer to anchors within the current document are followed automatically
+					and therefore do not cause this event to be fired.
+				</ul>
+				<br>
+				<strong>LoadImage(Source As String, Image As Picture)</strong>
+				<ul>
+					<li>Fired when an &lt;IMG&gt; tag or background graphic is about to be rendered.  The handler for this event should set the Image parameter to the requested graphic.
+				</ul>
+				<br>
+				<hr>
+		  </font>		
+          <font face='Tahoma' size='-1'><br>Copyright &copy; 2001-2002 Woodbury Associates</font>
+	</body>
+</html>
